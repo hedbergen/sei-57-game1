@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+/* body */
+body {
+  display: flex;
+  justify-content: center;
+  background-image: url(../ASSETS/virus-bg.jpg);
+  background-position: center;
+}
+
+/* main */
+.main {
+  display: flex;
+}
+
+/* header/logo */
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-image-container {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 60px;
+  background-image: url(../ASSETS/pan-damn-it-2.png);
+  background-position: center;
+  background-size: 250px;
+  background-repeat: no-repeat;
+}
+
+/* #logo {
+  display: ;
+  background-image: url(../ASSETS/pan-damn-it.png);
+  background-position: center;
+  height: 80px;
+} */
+
+/* start/score container */
+.start-score-container {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  height: 50px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 15px 40px;
+  color: #8afefb;
+  background-color: rgba(85, 8, 72, 0.6);
+  border: #8afefb 1px solid;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+button:hover {
+  background-color: rgba(228, 40, 196, 0.6);
+}
+
+.high-score-bg {
+  background-color: rgba(85, 8, 72, 0.3);
+  padding: 0px 20px;
+  border-radius: 5px;
+  border: #8afefb 1px solid;
+}
+
+#top-score {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 14px;
+  color: #8afefb;
+  text-decoration: underline;
+}
+
+.score-bg {
+  background-color: rgba(85, 8, 72, 0.3);
+  padding: 0px 20px;
+  border-radius: 5px;
+  border: #8afefb 1px solid;
+}
+
+#score {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 14px;
+  color: #8afefb;
+  text-decoration: underline;
+}
+
+p {
+  color: #8afefb;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+/* grid */
+.grid-container {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 600px;
+  border: rgba(0, 0, 0, 0.726) 2px solid;
+}
+
+.grid div {
+  height: 10%;
+  width: 10%;
+}
+
+.virus {
+  background-image: url(../ASSETS/virus-cell.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.jabb {
+  background-image: url(../ASSETS/needle.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* 
+@media screen (max-width: 800px) {
+  .main {
+    flex-direction: column;
+    margin: 30px auto;
+  }
+} */
