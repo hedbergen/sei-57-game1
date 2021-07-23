@@ -6,21 +6,7 @@ const grid = document.querySelector('.grid')
 const cells = []
 const startBtn = document.querySelector('#start-game')
 const scoreDisplay = document.querySelector('#score')
-// const virusDiv = document.querySelector('.virus-jabbed')
-// const jabbDiv = document.querySelector('.jab-successful')
 
-
-
-
-// function directHit(event) {
-//   if (jabbDiv.event.classList.target.contains('.virus-jabbed')) {
-//     score += 1_000
-//     scoreDisplay.textContent = score
-
-// }
-
-
-// const successfulJab = document.querySelector('.grid')
 
 
 // VARIABLES
@@ -30,31 +16,36 @@ let isPlaying = false
 let virusPosition = 0
 let score = 0
 
+
 const jabbClass = 'jabb'
 const virusClass = 'virus'
 let jabbPosition = 45
 
+// let highscore = localStorage.getItem('highscore')
 
 
 
 // FUNCTIONS / JABB
 
-// function collisionDetection() {
-  
-  
-// }
+// function newHighScore() {
+//   if (highscore !== null) {
+//     if (score > highscore) {
+//       localStorage.setItem('highscore', score)
+//     }
+//   }
+      
+
+
 
 function collision() {
-  // if (jabbPosition.classList.contains(virusPosition)) {
   score += 1000
   updateScore(score)
     
 } 
 
 function updateScore(score) {
-  console.log(score)
+  
   scoreDisplay.innerHTML = score
-  console.log(scoreDisplay)
   return scoreDisplay
 }
   
@@ -85,15 +76,6 @@ function addVirus() {
 // VIRUS MOVEMENT / SCORE FUNCTION
 
 
-// function handleJabb(event) {
-//   if (event.target.classList.contains(virusClass)) {
-//     score += 1_000
-//     scoreDisplay.textContent = score
-    
-//   }
-// }
-
-
 function handleStart() {
   if (isPlaying) return
   isPlaying = true
@@ -103,6 +85,8 @@ function handleStart() {
     newVirusPosition()
     addVirus()
   }, 3000)
+
+
   
 }
 
@@ -172,13 +156,8 @@ addJabb()
 
 // EVENTS
 
-// virusDiv.addEventListener('collision', handleJabb)
-// jabbDiv.addEventListener('collision', handleJabb)
-
-
 window.addEventListener('keyup', handleKeyUp)
 
 startBtn.addEventListener('click', handleStart)
-// cells.forEach(cell => cell.addEventListener('click', collision))
 
 
